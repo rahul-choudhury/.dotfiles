@@ -15,6 +15,7 @@ return {
         dependencies = {
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-nvim-lua',
             'hrsh7th/cmp-buffer',
             'L3MON4D3/LuaSnip',
             'saadparwaiz1/cmp_luasnip',
@@ -27,15 +28,14 @@ return {
             local cmp_action = require('lsp-zero.cmp').action()
 
             require('luasnip.loaders.from_vscode').lazy_load()
-            require('luasnip').filetype_extend('javascriptreact', { 'html' })
-            require('luasnip').filetype_extend('typescriptreact', { 'html' })
 
             cmp.setup({
                 sources = {
                     { name = 'path' },
                     { name = 'nvim_lsp' },
-                    { name = 'buffer', keyword_length = 3 },
-                    { name = 'luasnip', keyword_length = 2 },
+                    { name = 'nvim_lua' },
+                    { name = 'buffer' },
+                    { name = 'luasnip' },
                 },
 
                 mapping = {
