@@ -18,6 +18,7 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"
 
 export HISTSIZE=50000
 export SAVEHIST=10000
+export KEYTIMEOUT=1 # vi-mode escape time
 
 export EDITOR='nvim'
 export VISUAL='nvim'
