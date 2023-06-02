@@ -23,5 +23,5 @@ export KEYTIMEOUT=1 # vi-mode escape time
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-export RCLONE_PASSWORD_COMMAND='pass Rclone/config'
+export RCLONE_PASSWORD_COMMAND='pass rclone/config'
 
