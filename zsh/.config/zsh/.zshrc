@@ -18,6 +18,7 @@ zstyle ':completion:*' rehash true
 
 # edit command in vim
 zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 
 # exit shell on partial command line
 function exit_zsh() { exit }
@@ -37,13 +38,14 @@ zle -N clear_screen_and_scrollback
 bindkey '^L' clear_screen_and_scrollback
 
 bindkey -s ^f "tmux-sessionizer\n"
-bindkey -M vicmd v edit-command-line
 source /usr/share/fzf/shell/key-bindings.zsh
 
 alias vim=nvim
 alias ll='ls -lGAv --color=auto --group-directories-first'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+
+source "$CARGO_HOME/env"
 
 eval "$(starship init zsh)"
 
