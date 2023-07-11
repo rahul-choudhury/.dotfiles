@@ -45,8 +45,6 @@ alias ll='ls -lGAv --color=auto --group-directories-first'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
 
-source "$CARGO_HOME/env"
-
 eval "$(starship init zsh)"
 
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh

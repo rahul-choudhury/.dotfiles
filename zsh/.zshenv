@@ -1,13 +1,9 @@
-typeset -U path PATH
-path=(~/.local/bin $path)
-export PATH
-
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
-# $HOME cleanup
+export BUN_INSTALL="$HOME/.bun"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
@@ -26,3 +22,8 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 export RCLONE_PASSWORD_COMMAND='pass rclone/config'
+
+typeset -U path PATH
+path=(~/.local/bin $BUN_INSTALL/bin $path)
+export PATH
+
